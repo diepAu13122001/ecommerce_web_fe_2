@@ -31,12 +31,12 @@ const Header = () => {
       <header className="header-upper py-3">
         <div className="container-xxl">
           <div className="row align-items-center">
-            <div className="col-2">
+            <div className="col-3">
               <h2>
-                <Link className="text-white">Dev Corner</Link>
+                <Link className="text-white">Daily delicious food</Link>
               </h2>
             </div>
-            <div className="col-5">
+            <div className="col-6">
               <div className="input-group">
                 <input
                   type="text"
@@ -50,7 +50,7 @@ const Header = () => {
                 </span>
               </div>
             </div>
-            <div className="col-5">
+            <div className="col-3">
               <div className="header-upper-links d-flex align-items-center justify-content-around">
                 {/* <div>
                   <Link
@@ -70,7 +70,8 @@ const Header = () => {
                   >
                     <img src={user} alt="user" />
                     <p className="mb-0">
-                      Log in <br /> My Account
+                      Log in 
+                      {/* <br /> My Account */}
                     </p>
                   </Link>
                 </div>
@@ -82,7 +83,7 @@ const Header = () => {
                     <img src={cart} alt="cart" />
                     <div className="d-flex flex-column gap-10">
                       <span className="badge bg-white text-dark">0</span>
-                      <p className="mb-0">$ 500</p>
+                      {/* <p className="mb-0">$ 500</p> */}
                     </div>
                   </Link>
                 </div>
@@ -114,6 +115,7 @@ const Header = () => {
                       className="dropdown-menu"
                       aria-labelledby="dropdownMenuButton1"
                     >
+
                       <li>
                         <Link className="dropdown-item text-white" to="">
                           Action
@@ -136,7 +138,7 @@ const Header = () => {
                   <div className="d-flex align-items-center gap-15">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/product">Our Store</NavLink>
-                    <NavLink to="/blogs">Blogs</NavLink>
+                    {/* <NavLink to="/blogs">Blogs</NavLink> */}
                     <NavLink to="/contact">Contact</NavLink>
                   </div>
                 </div>

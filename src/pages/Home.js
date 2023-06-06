@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import BlogCard from "../components/BlogCard";
 import ProductCard from "../components/ProductCard";
@@ -14,100 +14,101 @@ const Home = () => {
           <div className="col-6">
             <div className="main-banner position-relative ">
               <img
-                src="images/main-banner-1.jpg"
+                src="https://media.cooky.vn/images/blog-2016/5-cach-chon-rau-cu-qua-tuoi-ngon-2.jpg"
+                style={{height:"450px"}}
                 className="img-fluid rounded-3"
                 alt="main banner"
               />
-              <div className="main-banner-content position-absolute">
+              {/* <div className="main-banner-content position-absolute">
                 <h4>SUPERCHARGED FOR PROS.</h4>
                 <h5>iPad S13+ Pro.</h5>
                 <p>From $999.00 or $41.62/mo.</p>
                 <Link className="button">BUY NOW</Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-6">
             <div className="d-flex flex-wrap gap-10 justify-content-between align-items-center">
               <div className="small-banner position-relative">
                 <img
-                  src="images/catbanner-01.jpg"
+                  src="https://znews-photo.zingcdn.me/w660/Uploaded/sgorvz/2016_07_21/rau_xanh_thai_doc_2_1.jpg"
                   className="img-fluid rounded-3"
                   alt="main banner"
                 />
-                <div className="small-banner-content position-absolute">
+                {/* <div className="small-banner-content position-absolute">
                   <h4>Best Sake</h4>
                   <h5>iPad S13+ Pro.</h5>
                   <p>
                     From $999.00 <br /> or $41.62/mo.
                   </p>
-                </div>
+                </div> */}
               </div>
               <div className="small-banner position-relative">
                 <img
-                  src="images/catbanner-02.jpg"
+                  src="https://znews-photo.zingcdn.me/w660/Uploaded/sgorvz/2016_07_21/rau_xanh_thai_doc_2_1.jpg"
                   className="img-fluid rounded-3"
                   alt="main banner"
                 />
-                <div className="small-banner-content position-absolute">
+                {/* <div className="small-banner-content position-absolute">
                   <h4>NEW ARRIVAL</h4>
                   <h5>But IPad Air</h5>
                   <p>
                     From $999.00 <br /> or $41.62/mo.
                   </p>
-                </div>
+                </div> */}
               </div>
               <div className="small-banner position-relative ">
                 <img
-                  src="images/catbanner-03.jpg"
+                  src="https://hongngochospital.vn/wp-content/uploads/2013/11/rau-muong.jpg"
                   className="img-fluid rounded-3"
                   alt="main banner"
                 />
-                <div className="small-banner-content position-absolute">
+                {/* <div className="small-banner-content position-absolute">
                   <h4>NEW ARRIVAL</h4>
                   <h5>But IPad Air</h5>
                   <p>
                     From $999.00 <br /> or $41.62/mo.
                   </p>
-                </div>
+                </div> */}
               </div>
               <div className="small-banner position-relative ">
                 <img
-                  src="images/catbanner-04.jpg"
+                  src="https://wrfarmers.com/wp-content/uploads/2021/09/ca%CC%89i-thi%CC%80a--960x635.jpeg"
                   className="img-fluid rounded-3"
                   alt="main banner"
                 />
-                <div className="small-banner-content position-absolute">
+                {/* <div className="small-banner-content position-absolute">
                   <h4>NEW ARRIVAL</h4>
                   <h5>But IPad Air</h5>
                   <p>
                     From $999.00 <br /> or $41.62/mo.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
       </Container>
-      <Container class1="home-wrapper-2 py-5">
+      {/* <Container class1="home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
             <div className="servies d-flex align-items-center justify-content-between">
               {/* {services?.map((i, j) => {
                 return ( */}
-                  <div className="d-flex align-items-center gap-15" key="1">
+                  {/* <div className="d-flex align-items-center gap-15" key="1">
                     <img src="" alt="services" />
                     <div>
                       <h6>Title</h6>
                       <p className="mb-0">Tagline</p>
                     </div>
-                  </div>
+                  </div> */}
                 {/* );
               })} */}
-            </div>
-          </div>
-        </div>
-      </Container>
-      <Container class1="home-wrapper-2 py-5">
+            {/* </div> */}
+      {/* //     </div> */}
+      {/* //   </div>
+      // </Container> */}
+      {/* <Container class1="home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
             <div className="categories d-flex justify-content-between flex-wrap align-items-center">
@@ -170,11 +171,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
       <Container class1="featured-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
-            <h3 className="section-heading">Featured Collection</h3>
+            <h3 className="section-heading">Flash sales</h3>
           </div>
           <ProductCard />
           <ProductCard />
@@ -183,7 +184,7 @@ const Home = () => {
         </div>
       </Container>
 
-      <Container class1="famous-wrapper py-5 home-wrapper-2">
+      {/* <Container class1="famous-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-3">
             <div className="famous-card position-relative">
@@ -246,9 +247,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
 
-      <Container class1="special-wrapper py-5 home-wrapper-2">
+      {/* <Container class1="special-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">Special Products</h3>
@@ -260,7 +261,7 @@ const Home = () => {
           <SpecialProduct />
           <SpecialProduct />
         </div>
-      </Container>
+      </Container> */}
       <Container class1="popular-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
@@ -268,7 +269,6 @@ const Home = () => {
           </div>
         </div>
         <div className="row">
-          <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />
@@ -309,7 +309,7 @@ const Home = () => {
         </div>
       </Container>
 
-      <Container class1="blog-wrapper py-5 home-wrapper-2">
+      {/* <Container class1="blog-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
             <h3 className="section-heading">Our Latest Blogs</h3>
@@ -329,7 +329,7 @@ const Home = () => {
             <BlogCard />
           </div>
         </div>
-      </Container>
+      </Container> */}
     </>
   );
 };
