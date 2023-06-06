@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
 import watch from "../images/watch.jpg";
 import Container from "../components/Container";
@@ -23,10 +23,27 @@ const Checkout = () => {
     const result = await axios.get("http://localhost:8080/veggy-service/v1/cart/get/14");
     setCart(result.data);
   };
+  let navigate = useNavigate()
+  const [order, setOrder] = useState({
+    orderStatus: "Da dat hang",
+    paymentMethodId: 0,
+    addressId: 0,
+    isDelivered: false
+  })
 
-  const order = async () => {
-    await axios.create();
-    loadCart();
+  const { orderStatus,
+    paymentMethodId,
+    addressId,
+    isDelivered } = order
+
+  const onInputChange = (e) => {
+    setOrder({ ...order, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    await axios.post("http://localhost:8080/veggy-service/v1/order/create", order)
+    navigate("/");
   }
 
   let total = 0;
@@ -141,7 +158,7 @@ const Checkout = () => {
                       <BiArrowBack className="me-2" />
                       Return to Cart
                     </Link>
-                    <Link to="/" className="button" onClick={order}>
+                    <Link to="/" className="button" onClick={onSubmit}>
                       Order
                     </Link>
                   </div>
@@ -170,12 +187,12 @@ const Checkout = () => {
                     </div>
                   </div>
                   <div className="flex-grow-1">
-                    <h5 className="total">{product.price* cartItems.data?.productAmount}đ</h5>
-                    {total += product.price*cartItems.data?.productAmount}
+                    <h5 className="total">{product.price * cartItems.data?.productAmount}đ</h5>
+                    {total += product.price * cartItems.data?.productAmount}
                   </div>
                 </div>
               </div>
-              
+
             ))
             }
             <div className="border-bottom py-4">
