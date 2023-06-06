@@ -41,7 +41,7 @@ const ProductCard = (props) => {
               } `}
           >
             <Link
-              to={`/product/:${product.id}`}
+              to={`/product/${product.id}`}
               className="product-card position-relative"
             >
               {/* <div className="wishlist-icon position-absolute">
