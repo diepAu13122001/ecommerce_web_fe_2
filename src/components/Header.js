@@ -70,7 +70,7 @@ const Header = () => {
                   >
                     <img src={user} alt="user" />
                     <p className="mb-0">
-                      Log in 
+                      makyy79@gmail.com
                       {/* <br /> My Account */}
                     </p>
                   </Link>
@@ -82,7 +82,7 @@ const Header = () => {
                   >
                     <img src={cart} alt="cart" />
                     <div className="d-flex flex-column gap-10">
-                      <span className="badge bg-white text-dark">0</span>
+                      {/* <span className="badge bg-white text-dark">0</span> */}
                       {/* <p className="mb-0">$ 500</p> */}
                     </div>
                   </Link>

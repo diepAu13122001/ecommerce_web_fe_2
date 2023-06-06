@@ -55,7 +55,6 @@ useEffect(()=>{
 const loadProduct=async ()=> {
     const result= await axios.get(`http://localhost:8080/veggy-service/v1/product/get/${id}`);
     setProduct(result.data);
-    console.log(product.data)
 }
 
 const loadProductDescription=async ()=> {
@@ -64,7 +63,10 @@ const loadProductDescription=async ()=> {
 }
 
 const addItemToCart = async () => {
-
+  // await axios.put(`http://localhost:8080/veggy-service/v1/cart/addProduct/14/7`);
+  window.location.href = "/cart";   
+  // setProduct(result.data);
+      
 }
 
 const addItemToOrder = async () => {
@@ -194,14 +196,14 @@ const addItemToOrder = async () => {
                   <div className="d-flex align-items-center gap-30 ms-5">
                     <button
                       className="button border-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#staticBackdrop"
+                      // data-bs-toggle="modal"
+                      // data-bs-target="#staticBackdrop"
                       type="button"
                       onClick={addItemToCart}
                     >
                       Add to Cart
                     </button>
-                    <button className="button signup" onClick={addItemToOrder}>Buy It Now</button>
+                    {/* <button className="button signup" onClick={addItemToOrder}>Buy It Now</button> */}
                   </div>
                 </div>
                 {/* <div className="d-flex align-items-center gap-15">
@@ -353,7 +355,7 @@ const addItemToOrder = async () => {
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-dialog-centered ">
+        {/* <div className="modal-dialog modal-dialog-centered ">
           <div className="modal-content">
             <div className="modal-header py-0 border-0">
               <button
@@ -396,7 +398,7 @@ const addItemToOrder = async () => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
