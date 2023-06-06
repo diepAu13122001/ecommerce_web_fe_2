@@ -53,13 +53,13 @@ useEffect(()=>{
 })
 
 const loadProduct=async ()=> {
-    const result= await axios.get(`http://localhost:8080/veggy-service/v1/product/get/1`);
+    const result= await axios.get(`http://localhost:8080/veggy-service/v1/product/get/${id}`);
     setProduct(result.data);
     console.log(product.data)
 }
 
 const loadProductDescription=async ()=> {
-  const result= await axios.get(`http://localhost:8080/veggy-service/v1/productDescription/findByProduct/1`);
+  const result= await axios.get(`http://localhost:8080/veggy-service/v1/productDescription/findByProduct/${id}`);
   setProductDescription(result.data);
 }
 
